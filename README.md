@@ -1,42 +1,63 @@
-# Hi, I'm Ahtisham Dilawar 👋
+<h1 align="center">Ahtisham Dilawar</h1>
 
-**AI & Backend Engineer** building production financial-risk and automation systems with FastAPI, LangGraph, and Azure.
+<p align="center">
+  I build backends and AI agents for money things. The kind that have to be right.
+</p>
 
-Currently a Software Engineer at **DeFa by Invoicemate**, where I designed and built **Droog**, an LLM-powered due-diligence and monitoring agent that helps risk officers assess PSP prefunding applications across 14 credit-risk criteria, supporting oversight of $5M+ in transaction volume. My work centres on agentic RAG, financial-data analysis, MCP integrations, secure APIs, and human-in-the-loop decision workflows.
+<p align="center">
+  <a href="https://www.linkedin.com/in/ahtisham-dilawar">LinkedIn</a> ·
+  <a href="mailto:ahtishamdilawar@gmail.com">Email</a> ·
+  <a href="https://github.com/ahtishamdilawar?tab=repositories">Repos</a>
+</p>
 
-BS Computer Science, FAST National University of Computer and Emerging Sciences (2026).
+---
 
-## 🔧 Tech I work with
+### About
 
-| Area | Stack |
-| --- | --- |
-| Languages | Python, TypeScript, JavaScript, SQL |
-| Backend | FastAPI, Node.js, Express, Next.js, Strapi |
-| AI / Agents | LangGraph, LangChain, RAG, MCP, OpenAI API, Gemini, Azure AI Foundry |
-| Cloud & Data | Azure AI Search, Azure Cosmos DB, AWS Lambda, S3, Supabase, MongoDB, Docker |
-| Integrations | QuickBooks, Salesforce, HubSpot, Twilio, Meta APIs, Resend |
-| Auth & Security | Auth0, OAuth 2.0, Azure Key Vault |
+I'm a software engineer from Pakistan. I spend most of my time on the boring-but-critical side of AI: the part where an LLM has to work with financial statements, transaction data and compliance evidence, and a real person has to be able to trust the output.
 
-## 🚀 Featured projects
+Right now I'm at **DeFa by Invoicemate**, building an agent that helps risk officers review payment-service providers before money moves. Before that I built AI backends for a non-profit finance platform, WhatsApp agents for a real-estate company, and MCP servers that let agents talk to QuickBooks, Salesforce and HubSpot.
 
-| Project | What it is |
-| --- | --- |
-| [expense-tracker-skill](https://github.com/ahtishamdilawar/expense-tracker-skill) | Local-first, deterministic personal-finance ledger exposed as a portable Agent Skill for Claude Code, Codex, and Hermes. Python + SQLite own the state; the agent only handles intent. |
-| [nuces-flex-MCP](https://github.com/ahtishamdilawar/nuces-flex-MCP) | MCP server that lets Claude Desktop or Copilot query the FAST-NUCES Flex student portal (marks, attendance, transcripts) in plain English. FastMCP + Selenium. |
-| [quickbook-OAuth-demo](https://github.com/ahtishamdilawar/quickbook-OAuth-demo) | Multi-tenant QuickBooks Online OAuth 2.0 flow in FastAPI with automatic token refresh and per-tenant storage. |
-| [mcp-server-test](https://github.com/ahtishamdilawar/mcp-server-test) | Minimal MCP server on Starlette with SSE transport, ready to deploy to Render. |
-| [CForge-mini-compiler](https://github.com/ahtishamdilawar/CForge-mini-compiler) | Compiler for a custom C-like language: PLY lexer/parser, type checking, LLVM IR and NASM code generation, AST visualisation. |
-| [computer_networks_p2p_app](https://github.com/ahtishamdilawar/computer_networks_p2p_app) | Real-time peer-to-peer chat, file sharing and multimedia app built on WebRTC, Socket.IO and React. |
-| [LoLQueueAssist](https://github.com/ahtishamdilawar/LoLQueueAssist) | PyQt5 desktop tool that automates League of Legends queue acceptance and champion pick/ban via the LCU API. |
+I graduated from FAST-NUCES in 2026 with a degree in computer science.
 
-**Other things I've built:** FBR Invoicer, an offline-first Tauri desktop app for FBR-compliant digital tax invoicing used by 5+ businesses; FuzzSeer, an LLM-assisted Solidity fuzzer that combines static analysis, graph-based path prioritisation and Echidna.
+### How I like to work
 
-## 📫 Reach me
+- **The model talks, the code decides.** LLMs are great at intent, terrible at bookkeeping. I let them handle the conversation and keep every balance, state change and decision in plain, testable code.
+- **Humans stay in the loop.** Anything that touches money gets citations, an audit trail and a person who can say no. I design for that from day one instead of bolting it on.
+- **Ship it to a real user early.** My favourite projects are the ones somebody outside my laptop actually depends on. A desktop invoicing app I built is used daily by a handful of small businesses, which taught me more than any tutorial.
+- **Local-first when possible.** SQLite, plain files, offline modes. Fewer moving parts, fewer 3 AM pages.
+- **Small, readable, done.** I'd rather delete a feature than ship one I can't explain in a paragraph.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-ahtisham--dilawar-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahtisham-dilawar)
-[![Email](https://img.shields.io/badge/Email-ahtishamdilawar%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:ahtishamdilawar@gmail.com)
+### Things I've made
+
+**[expense-tracker-skill](https://github.com/ahtishamdilawar/expense-tracker-skill)** is my take on personal finance for the agent era. A deterministic SQLite ledger with a portable Agent Skill on top, so Claude Code, Codex or Hermes can run it without ever being allowed to make up a number.
+
+**[nuces-flex-MCP](https://github.com/ahtishamdilawar/nuces-flex-MCP)** started as a joke ("roast my transcript") and turned into a proper MCP server for my university's student portal. Ask Claude how many classes you've bunked and it'll tell you.
+
+**[quickbook-OAuth-demo](https://github.com/ahtishamdilawar/quickbook-OAuth-demo)** and **[mcp-server-test](https://github.com/ahtishamdilawar/mcp-server-test)** are small, deliberately minimal reference implementations I keep coming back to when I need multi-tenant OAuth or a deployable MCP server done right.
+
+**[CForge-mini-compiler](https://github.com/ahtishamdilawar/CForge-mini-compiler)** is a compiler for a made-up C-like language, all the way from lexer to LLVM IR and NASM. University project, but the one I'm proudest of from that era.
+
+**[LoLQueueAssist](https://github.com/ahtishamdilawar/LoLQueueAssist)** auto-accepts League of Legends queues and handles champion pick/ban so I stop missing games. **[lazy-post-detector](https://github.com/ahtishamdilawar/lazy-post-detector)** flags LinkedIn posts with em dashes. It's a meme. It's not that deep.
+
+Off GitHub: **FBR Invoicer**, an offline-first Tauri desktop app for Pakistan's digital tax invoicing, and **FuzzSeer**, an LLM-guided fuzzer for Solidity contracts that prioritises risky execution paths instead of brute-forcing.
+
+### Currently
+
+- Building agentic RAG pipelines on LangGraph and Azure AI Search for financial due diligence
+- Going deep on MCP and Agent Skills as the interface between models and real systems
+- Thinking about what "explainable" should mean when an agent recommends a credit decision
+
+### Tools I reach for
 
 <p>
-  <img src="https://github-readme-stats.vercel.app/api?username=ahtishamdilawar&show_icons=true&theme=default&hide_border=true" alt="GitHub stats" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahtishamdilawar&layout=compact&hide_border=true" alt="Top languages" height="160" />
+  <img src="https://skillicons.dev/icons?i=python,ts,js,fastapi,nodejs,nextjs,azure,aws,docker,mongodb,sqlite,rust,tauri&perline=13" alt="tools" />
+</p>
+
+Plus LangGraph, LangChain, the OpenAI and Gemini APIs, Auth0, and whatever the problem actually needs.
+
+---
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahtishamdilawar&layout=compact&hide_border=true&hide=jupyter%20notebook,css,html" alt="Top languages" height="150" />
 </p>
