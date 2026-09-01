@@ -14,11 +14,9 @@
 
 ### About
 
-I'm a software engineer from Pakistan. I spend most of my time on the boring-but-critical side of AI: the part where an LLM has to work with financial statements, transaction data and compliance evidence, and a real person has to be able to trust the output.
+I'm a software engineer. I spend most of my time on the boring-but-critical side of AI: the part where an LLM has to work with financial statements, transaction data and compliance evidence, and a real person has to be able to trust the output.
 
 Right now I'm at **DeFa by Invoicemate**, building an agent that helps risk officers review payment-service providers before money moves. Before that I built AI backends for a non-profit finance platform, WhatsApp agents for a real-estate company, and MCP servers that let agents talk to QuickBooks, Salesforce and HubSpot.
-
-I graduated from FAST-NUCES in 2026 with a degree in computer science.
 
 ### How I like to work
 
