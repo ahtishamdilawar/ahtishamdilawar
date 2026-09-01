@@ -1,8 +1,3 @@
-<h1 align="center">Ahtisham Dilawar</h1>
-
-<p align="center">
-  I build backends and AI agents for money things. The kind that have to be right.
-</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ahtisham-dilawar">LinkedIn</a> ·
