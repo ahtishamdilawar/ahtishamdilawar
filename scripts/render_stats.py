@@ -19,6 +19,10 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "stats.svg")
 # coursework noise, not what the repos are actually about
 SKIP_LANGS = {"Jupyter Notebook", "CSS", "HTML", "R", "TeX", "Batchfile", "Makefile"}
 
+# university projects big enough to swamp the ranking. the WinForms/SWIG one is
+# the sole source of every C# and C++ byte on the account. add names here freely.
+SKIP_REPOS = {"Flex-Student-Management-System"}
+
 CAL_QUERY = """
 query($login:String!, $from:DateTime!, $to:DateTime!) {
   user(login:$login) {
@@ -36,7 +40,7 @@ LANG_QUERY = """
 query($login:String!) {
   user(login:$login) {
     repositories(first:100, isFork:false, ownerAffiliations:OWNER, privacy:PUBLIC) {
-      nodes { languages(first:10) { edges { size node { name } } } }
+      nodes { name languages(first:10) { edges { size node { name } } } }
     }
   }
 }
@@ -85,13 +89,18 @@ def contributions():
 def languages():
     totals = {}
     for repo in graphql(LANG_QUERY, login=USER)["user"]["repositories"]["nodes"]:
+        if repo["name"] in SKIP_REPOS:
+            continue
         for edge in repo["languages"]["edges"]:
             name = edge["node"]["name"]
             if name in SKIP_LANGS:
                 continue
             totals[name] = totals.get(name, 0) + edge["size"]
     # names only, most bytes first; percentages read as a ranking nobody means
-    return [name for name, _ in sorted(totals.items(), key=lambda kv: -kv[1])[:5]]
+    grand = sum(totals.values()) or 1
+    ranked = sorted(totals.items(), key=lambda kv: -kv[1])
+    # a stray build script is not a language you work in
+    return [name for name, size in ranked if size / grand >= 0.02][:5]
 
 
 CELL, GAP = 11, 3
