@@ -90,9 +90,8 @@ def languages():
             if name in SKIP_LANGS:
                 continue
             totals[name] = totals.get(name, 0) + edge["size"]
-    ranked = sorted(totals.items(), key=lambda kv: -kv[1])[:5]
-    grand = sum(size for _, size in ranked) or 1
-    return [(name, size / grand) for name, size in ranked]
+    # names only, most bytes first; percentages read as a ranking nobody means
+    return [name for name, _ in sorted(totals.items(), key=lambda kv: -kv[1])[:5]]
 
 
 CELL, GAP = 11, 3
@@ -106,8 +105,8 @@ def render():
 
     grid_w = len(weeks) * STEP - GAP
     grid_bottom = PAD_TOP + 7 * STEP - GAP
-    bar_y = grid_bottom + 34
-    height = bar_y + 44
+    langs_y = grid_bottom + 34
+    height = langs_y + 12
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{PAD_LEFT + grid_w + 8}" '
@@ -153,25 +152,9 @@ def render():
         f'{total:,} contributions in the last year</text>'
     )
 
-    x = float(PAD_LEFT)
-    for idx, (_, share) in enumerate(langs):
-        w = share * grid_w
-        opacity = ("1", "0.78", "0.58", "0.4", "0.26")[idx]
-        out.append(
-            f'<rect x="{x:.1f}" y="{bar_y}" width="{max(w - 2, 1):.1f}" height="7" rx="3" '
-            f'fill="{ACCENT}" fill-opacity="{opacity}"/>'
-        )
-        x += w
-
-    x = float(PAD_LEFT)
-    for idx, (name, share) in enumerate(langs):
-        opacity = ("1", "0.78", "0.58", "0.4", "0.26")[idx]
-        out.append(
-            f'<rect x="{x:.1f}" y="{bar_y + 19}" width="7" height="7" rx="2" '
-            f'fill="{ACCENT}" fill-opacity="{opacity}"/>'
-            f'<text x="{x + 11:.1f}" y="{bar_y + 26}">{name.lower()} {share * 100:.0f}%</text>'
-        )
-        x += len(name) * 5.6 + 46
+    out.append(
+        f'<text x="{PAD_LEFT}" y="{langs_y}">{" · ".join(l.lower() for l in langs)}</text>'
+    )
 
     out.append("</svg>")
     with open(OUT, "w", encoding="utf-8") as fh:
