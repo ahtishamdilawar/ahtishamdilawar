@@ -11,5 +11,5 @@ currently at [defa by invoicemate](https://defa.invoicemate.net/), building an l
 [ahtishamdilawar.me](https://ahtishamdilawar.me) · [linkedin](https://www.linkedin.com/in/ahtisham-dilawar) · [email](mailto:ahtishamdilawar@gmail.com)
 
 </samp>
-
-<img src="./stats.svg" width="100%" alt="contribution graph for the last year, and most used languages" />
+<!-- 
+<img src="./stats.svg" width="100%" alt="contribution graph for the last year, and most used languages" /> -->
