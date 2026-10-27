@@ -6,7 +6,6 @@ ai / backend engineer in pakistan. i build agents for systems that touch money, 
 
 currently at [defa by invoicemate](https://defa.invoicemate.net/), building an llm risk agent that reviews payment providers before money moves.
 
-<img src="https://skillicons.dev/icons?i=python,fastapi,ts" height="40" alt="python, fastapi, typescript" />
 
 [ahtishamdilawar.me](https://ahtishamdilawar.me) · [linkedin](https://www.linkedin.com/in/ahtisham-dilawar) · [email](mailto:ahtishamdilawar@gmail.com)
 
